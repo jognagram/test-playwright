@@ -11,7 +11,7 @@ test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Click the get started link.
-  await page.getByRole('link', { name: 'star' }).click();
+  await page.getByRole('link', { name: 'get started' }).click();
 
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
