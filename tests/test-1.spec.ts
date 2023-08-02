@@ -12,6 +12,7 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('What needs to be done?').click();
   await page.getByPlaceholder('What needs to be done?').fill('do the shopping');
   await page.getByPlaceholder('What needs to be done?').press('Enter');
+  
   await expect(page.getByTestId('todo-title')).toHaveCount(3);
   await page
     .locator('li')
