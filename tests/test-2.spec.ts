@@ -6,7 +6,7 @@ test('Ensure we can login and logout', async ({ page }) => {
   await page.getByLabel('Password*').fill('password');
   await page.getByRole('button').click();
   await page.waitForSelector('body');
-  await expect(page).toHaveURL('https://demo.filamentphp.com/admin/dashboard');
+  await expect(page).toHaveURL('https://demo.filamentphp.com');
   await page.getByRole('button', { name: 'Account' }).click();
   await page.getByRole('menuitem', { name: 'Logout' }).click();
   await page.waitForSelector('body');
