@@ -11,6 +11,4 @@ test('Ensure we can login and logout', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Logout' }).click();
   await page.waitForSelector('body');
   await expect(page).toHaveURL('https://demo.filamentphp.com/login');
-
-
 });
