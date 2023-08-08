@@ -4,12 +4,12 @@ test('test', async ({ page }) => {
   
 await page.goto('https://demo.filamentphp.com/login');
 
-await page.getByLabel('Email address*').click();
-await page.getByLabel('Email address*').fill('admin@filamentphp.com');
-await page.getByLabel('Email address*').press('Tab');
-await page.getByLabel('Password*').fill('password');
-await page.getByLabel('Password*').press('Enter');
-await page.getByRole('link', { name: 'Products 19' }).click();
+await page.click('text=Email address*');
+await page.fill('input[name="email"]', 'admin@filamentphp.com');
+await page.press('input[name="email"]', 'Tab');
+await page.fill('input[name="password"]', 'password');
+await page.press('input[name="password"]', 'Enter');
+await page.click('text=Products 19');
 await page.getByRole('link', { name: 'New product' }).click();
 await page.getByLabel('Name*').click();
 await page.getByLabel('Name*').fill('Iphone XS');
